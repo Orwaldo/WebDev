@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script id='base'>
+
+        function add(){
+            return 2 + 4
+        }
+
+        console.log(add())
+        
+
+        var colors = ['red', 'green', 'blue']
+        var newColors = colors.concat('pink')
+        console.log(newColors)
+
+
+        var name = 'Damien'
+        if( 1 === 1){
+            var name = 'Bruyndonckx'
+        }
+        console.log(name)
+
+        var person = {
+            fName: 'Damien',
+            lName: 'Bruyndonckx'
+        }
+
+        function logName(person){
+            console.log(`Vous vous appelez ${person.fName} ${person.lName}`)
+        }
+    </script>
+    <script id='first-steps'>
+        //logName(person)-----------------
+        function tutorial( ){
+            var op1=4;
+            var op2=7;
+            console.log("Welcome to the world of Javascript!");
+            console.log(`${op1}+${op2}=${op1+op2});
+        }
+    </script>
+    <section id='react-test'></section>
+    <section id='react-test-babel'></section>
+    <section id='react-test-component'></section>
+    
+    <section id='react-root'>
+        <script>
+            ReactDOM.render(
+                React.createElement('h1',null,'Hello world - React'),
+                document.getElementById('react-root')
+                )
+        </script>
+        <script type="text/babel">
+            //ReactDOM.render(<h2>Bonjour de React et Babel</h2>,
+            //document.getElementById('react-test-babel'))
+        </script>
+        <script type=text/babel>
+            class Bonjour extends React.Component {
+                render(){
+                    return(
+                <div>
+                    <h1>Welcome from React Component</h1>
+                    
+
+
+
+
+                </div>
+                )
+            }
+            ReactDOM.render(
+                <Bonjour/>,
+                document.getElementById('react-test-component')
+                )
+        </script>
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>
