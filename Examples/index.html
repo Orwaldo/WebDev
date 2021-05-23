@@ -5,16 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js">
-    </script>
-    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/browse/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        h1 {
+            text-decoration:underline;
+        }
+        .hello {
+            color:#f99;
+        }
+    </style>
 </head>
 
 <body>
-<section id='react-root'>
+    <script id='first-steps'>
+        function tutorial( ){
+            var op1=4
+            var op2=7
+            console.log("Welcome to the world of Javascript!")
+            console.log(`${op1}+${op2}=${op1+op2}`)
+        }
+    </script>
+    <section id='react-root'></section>
+    <section id='react-test-babel'></section>
+    <section id='react-test-component'></section>
+    <section id='react-function-as-tag'></section>
+    <script>
+        ReactDOM.render(
+            React.createElement('h1',null,'Hello world - React Create'),
+            document.getElementById('react-root')
+            )
+    </script>
+    <script type="text/babel">
+        ReactDOM.render(
+            <h2>Bonjour de React et Babel</h2>,
+            document.getElementById('react-test-babel'))
+    </script>
+    <script type=text/babel>
+        class Bonjour extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h1>Welcome from React Component</h1>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(
+            <Bonjour/>,
+            document.getElementById('react-test-component'))
+    </script>
+    <script type=text/babel>
+        const QuickHi = () => (
+            <div>
+                <h1 className='hello'>A quick Hi from React</h1>
+            </div>
+        )
+        ReactDOM.render(
+            <QuickHi />,
+            document.getElementById('react-function-as-tag'))
+    </script>
     
-</section>
 </body>
-
 </html>

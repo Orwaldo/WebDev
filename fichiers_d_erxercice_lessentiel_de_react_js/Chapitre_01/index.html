@@ -39,53 +39,5 @@
             console.log(`Vous vous appelez ${person.fName} ${person.lName}`)
         }
     </script>
-    <script id='first-steps'>
-        //logName(person)-----------------
-        function tutorial( ){
-            var op1=4;
-            var op2=7;
-            console.log("Welcome to the world of Javascript!");
-            console.log(`${op1}+${op2}=${op1+op2});
-        }
-    </script>
-    <section id='react-root'></section>
-    <section id='react-test-babel'></section>
-    <section id='react-test-component'></section>
-    <section id='react-function-as-tag'></section>
-    <script>
-            ReactDOM.render(
-                React.createElement('h1',null,'Hello world - React Create'),
-                document.getElementById('react-root')
-                )
-        </script>
-        <script type="text/babel">
-            ReactDOM.render(
-                <h2>Bonjour de React et Babel</h2>,
-                document.getElementById('react-test-babel'))
-        </script>
-        <script type=text/babel>
-            class Bonjour extends React.Component{
-                render(){
-                    return(
-                        <div>
-                            <h1>Welcome from React Component</h1>
-                        </div>
-                    )
-                }
-            }
-            ReactDOM.render(
-                <Bonjour/>,
-                document.getElementById('react-test-component'))
-        </script>
-    <script type=text/babel>
-        const QuickHi = () => (
-            <div>
-                <h1>A quick Hi from React</h1>
-            </div>
-        )
-        ReactDOM.render(
-            <QuickHi />,
-            document.getElementById('react-function-as-tag'))
-    </script>
 </body>
 </html>
