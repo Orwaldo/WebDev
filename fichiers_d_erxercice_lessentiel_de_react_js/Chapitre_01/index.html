@@ -51,9 +51,8 @@
     <section id='react-root'></section>
     <section id='react-test-babel'></section>
     <section id='react-test-component'></section>
-    
-    <section id='react-root'></section>
-        <script>
+    <section id='react-function-as-tag'></section>
+    <script>
             ReactDOM.render(
                 React.createElement('h1',null,'Hello world - React Create'),
                 document.getElementById('react-root')
@@ -72,14 +71,21 @@
                             <h1>Welcome from React Component</h1>
                         </div>
                     )
-            }
+                }
             }
             ReactDOM.render(
                 <Bonjour/>,
                 document.getElementById('react-test-component'))
         </script>
-    <script>
-        
+    <script type=text/babel>
+        const QuickHi = () => (
+            <div>
+                <h1>A quick Hi from React</h1>
+            </div>
+        )
+        ReactDOM.render(
+            <QuickHi />,
+            document.getElementById('react-function-as-tag'))
     </script>
 </body>
 </html>
