@@ -47,23 +47,23 @@
             render(){
                 return(
                     <div>
-                        <h1>Welcome from React Component</h1>
+                        <h1>A now {this.props.message} Welcome from a React {this.props.version} Component</h1>
                     </div>
                 )
             }
         }
         ReactDOM.render(
-            <Bonjour/>,
+            <Bonjour message='formal' version={16}/>,
             document.getElementById('react-test-component'))
     </script>
     <script type=text/babel>
-        const QuickHi = () => (
+        const QuickHi = ({message}) => (
             <div>
-                <h1 className='hello'>A quick Hi from React</h1>
+                <h1 className='hello'>A quick {message} from React and I</h1>
             </div>
         )
         ReactDOM.render(
-            <QuickHi />,
+            <QuickHi message='Mwah' />,
             document.getElementById('react-function-as-tag'))
     </script>
     
