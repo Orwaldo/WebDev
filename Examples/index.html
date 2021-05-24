@@ -44,10 +44,21 @@
     </script>
     <script type=text/babel>
         class Bonjour extends React.Component{
+            constructor(props){
+                super(props)
+                this.state = {
+                    version: this.props.version
+                }
+                this.handleClick = this.handleClick.bind(this)
+            }
+            handleClick(e){
+                this.setState({version:this.state.version+1})
+            }
             render(){
                 return(
                     <div>
-                        <h1>A now {this.props.message} Welcome from a React {this.props.version} Component</h1>
+                        <h1>A now {this.props.message} Welcome from a React
+                        <span className='easter1' onClick={this.handleClick}> {this.state.version}</span> Component</h1>
                     </div>
                 )
             }
